@@ -15,11 +15,17 @@ namespace Lab_MVC_med_Javascript_och_Ajax.Controllers
     public class UsersController : Controller
     {
         private GalleryDbContext db = new GalleryDbContext();
+        
 
         // GET: Users
         public ActionResult Index()
         {
             return View(db.Users.ToList());
+        }
+        public ActionResult Test()
+        {         
+            return Json(db.Users.ToList(), JsonRequestBehavior.AllowGet);
+
         }
         public ActionResult Login()
         {
@@ -64,13 +70,17 @@ namespace Lab_MVC_med_Javascript_och_Ajax.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(User user)
         {
+            if(db.Users.Any(x=> x.email == user.email))
+            {
+                return new HttpStatusCodeResult(400, "Kontot finns redan");
+            }
             user.Salt = HelpClass.HashnSalt.CreateSalt(10);
             user.hash = HelpClass.HashnSalt.GenerateSHA256Hash(user.hash,user.Salt);            
             if (ModelState.IsValid)
             {
                 db.Users.Add(user);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Gallery");
             }
 
             return View(user);
