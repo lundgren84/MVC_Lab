@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>Show</h2>
+
+<img src="@Model.url" alt="...">
+<h1>@Model.Title</h1>
+<h2>Id:@Model.id</h2>
+<h2>Size:@Model.Size</h2>
+<div>@Html.ActionLink("Back", "Index", "Gallery")</div>

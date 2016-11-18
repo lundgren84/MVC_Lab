@@ -1,0 +1,33 @@
+﻿
+<h2>Comment</h2>
+
+<div class="row">
+    <div class="col-xs-6 col-md-4">
+        <div class="thumbnail">
+            <img src="@Model.url" alt="...">
+            <div class="caption">
+                <h3>@Model.Title</h3>
+                <p>Id: @Model.id</p>
+                <p>Size: @Model.Size</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6 col-md-4">
+        <h4>Comments</h4>
+        @foreach (var item in Model.Comments)
+        {
+            if (@item.UserRefID != null)
+            {
+                
+                <p>-@item.content <small>(@item.User.email)</small></p>
+            }
+            else
+            { <p>-@item.content <small>(Annonym)</small></p> }
+
+        }
+    </div>
+</div>
+<div>@Html.ActionLink("Back", "Index", "Gallery")</div>
+
+

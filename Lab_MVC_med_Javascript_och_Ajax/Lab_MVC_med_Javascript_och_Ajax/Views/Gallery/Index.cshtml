@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+
+@Html.ActionLink("Uppload new picture", "Create", "Pictures")
+
+<div class="container">
+    <div class="row">
+        @for (var x = 0; x < Model.Count; x++)
+        {
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <img style="height:100px;" src="@Model[x].url" alt="...">
+                    <div class="caption">
+                        <h3>@Model[x].Title</h3>
+                        <p>Size = @Model[x].Size</p>                       
+                        <div>@Html.ActionLink("Comment", "Create", "Comments", new { id = Model[x].id }, null)</div>
+                        <div>@Html.ActionLink("View picture", "Show", "Gallery", new { id = Model[x].id }, null)</div>
+                        <div>@Html.ActionLink("See Comments", "Comment", "Gallery", new { id = Model[x].id }, null)<span>(@Model[x].Comments.Count)</span></div>
+                        <div>@Html.ActionLink("Delete", "Delete", "Pictures", new { id = Model[x].id }, null)</div>
+                       
+                    </div>
+                </div>
+            </div>
+        }    
+
+    </div>
+</div>
