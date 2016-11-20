@@ -16,7 +16,8 @@ namespace Lab_MVC_med_Javascript_och_Ajax.Controllers
         {
             return View();
         }
-       
-       
+        public ActionResult Test() { Dictionary<string, object> data = new Dictionary<string, object>(); data.Add("Placeholder", "Placeholder"); return View(data); }
+
+
     }
 }

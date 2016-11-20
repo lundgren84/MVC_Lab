@@ -16,11 +16,15 @@ namespace Lab_MVC_med_Javascript_och_Ajax
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
+          
         }
         protected void Application_Error(object sender, EventArgs e)
         {
-    
+          
+        }
+        protected void Application_End()//När??
+        {
+            System.Diagnostics.Debugger.Break();
         }
     }
 }
