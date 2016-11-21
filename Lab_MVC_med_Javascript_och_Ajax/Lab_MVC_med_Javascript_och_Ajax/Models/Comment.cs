@@ -13,7 +13,7 @@ namespace Lab_MVC_med_Javascript_och_Ajax.Models
         public int? PictureRefID { get; set; }
         [ForeignKey(name: "PictureRefID")]
         public virtual Picture Picture { get; set; }
-        public int? UserRefID { get; set; }
+        public Guid? UserRefID { get; set; }
         [ForeignKey(name:"UserRefID")]
         public virtual User User { get; set; }
     }

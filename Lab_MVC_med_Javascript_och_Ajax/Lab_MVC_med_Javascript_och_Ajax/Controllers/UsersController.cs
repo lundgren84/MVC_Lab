@@ -70,12 +70,15 @@ namespace Lab_MVC_med_Javascript_och_Ajax.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(User user)
         {
-            if(db.Users.Any(x=> x.email == user.email))
+            if (db.Users.Any(x => x.email == user.email))
             {
                 return new HttpStatusCodeResult(400, "Kontot finns redan");
             }
+            user.id = new Guid();
             user.Salt = HelpClass.HashnSalt.CreateSalt(10);
-            user.hash = HelpClass.HashnSalt.GenerateSHA256Hash(user.hash,user.Salt);            
+            user.hash = HelpClass.HashnSalt.GenerateSHA256Hash(user.hash,user.Salt);
+
+          
             if (ModelState.IsValid)
             {
                 db.Users.Add(user);

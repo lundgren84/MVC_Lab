@@ -8,7 +8,7 @@ namespace Lab_MVC_med_Javascript_och_Ajax.Models
 {
     public class User
     {
-        public int id { get; set; }
+        public Guid id { get; set; }
         public string email { get; set; }
         public string Salt { get; set; }
         [Display(Name = "Password")]
