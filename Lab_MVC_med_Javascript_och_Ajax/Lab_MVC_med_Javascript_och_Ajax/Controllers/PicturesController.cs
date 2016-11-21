@@ -150,7 +150,7 @@ namespace Lab_MVC_med_Javascript_och_Ajax.Controllers
             }
             catch (Exception e)
             {
-                //Debug.WriteLine(e.Message);
+              //  Debug.WriteLine(e.Message);
             }
             return false;
         }

@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_MVC_med_Javascript_och_Ajax", "Lab_MVC_med_Javascript_och_Ajax\Lab_MVC_med_Javascript_och_Ajax.csproj", "{D559C3BC-DB28-46EF-9919-E6C6C384709D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceLibrary", "InterfaceLibrary\InterfaceLibrary.csproj", "{B69A47A6-C62F-4603-B959-70BCAB6583D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connection", "Connection\Connection.csproj", "{DDBAEDCE-8746-49CF-88E3-722B8136E394}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D559C3BC-DB28-46EF-9919-E6C6C384709D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D559C3BC-DB28-46EF-9919-E6C6C384709D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D559C3BC-DB28-46EF-9919-E6C6C384709D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B69A47A6-C62F-4603-B959-70BCAB6583D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69A47A6-C62F-4603-B959-70BCAB6583D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69A47A6-C62F-4603-B959-70BCAB6583D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69A47A6-C62F-4603-B959-70BCAB6583D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDBAEDCE-8746-49CF-88E3-722B8136E394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDBAEDCE-8746-49CF-88E3-722B8136E394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDBAEDCE-8746-49CF-88E3-722B8136E394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDBAEDCE-8746-49CF-88E3-722B8136E394}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

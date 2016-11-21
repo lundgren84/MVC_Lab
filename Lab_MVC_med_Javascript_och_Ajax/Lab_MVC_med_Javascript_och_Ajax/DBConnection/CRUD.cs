@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using Lab_MVC_med_Javascript_och_Ajax.Models;
 using System.Data.Entity;
+using InterfaceLibrary;
 
 namespace Lab_MVC_med_Javascript_och_Ajax.DBConnection
 {
-    public class CRUD
+    public class CRUD:ICrud
     {
         internal static List<Picture> GetPictures()
         {      
@@ -33,6 +34,26 @@ namespace Lab_MVC_med_Javascript_och_Ajax.DBConnection
 
             }
             return success;
+        }
+
+        public void Add()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Edit()
+        {
+            throw new NotImplementedException();
+        }
+
+        public object Get()
+        {
+            throw new NotImplementedException();
         }
     }
 }
