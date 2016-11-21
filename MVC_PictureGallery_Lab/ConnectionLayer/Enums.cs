@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConnectionLayer
 {
-    public class Class1
+    public enum GalleryTopics
     {
+        Hollyday, Work, Family, Fun, Love, Default,
     }
 }

@@ -112,6 +112,7 @@
     <Compile Include="Models\AccountViewModel.cs" />
     <Compile Include="Models\AlbumViewModel.cs" />
     <Compile Include="Models\CommentViewModel.cs" />
+    <Compile Include="Models\FakeDB.cs" />
     <Compile Include="Models\PictureViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -134,6 +135,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BuissnesLayer\BuissnesLayer.csproj">
+      <Project>{ffcad7ed-2f4f-47eb-aee7-247d433160c3}</Project>
+      <Name>BuissnesLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectionLayer\ConnectionLayer.csproj">
+      <Project>{af4d65ec-2e02-400d-81f3-8fd256f4a8ef}</Project>
+      <Name>ConnectionLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InterfaceDLL\InterfaceDLL.csproj">
+      <Project>{d5c852b5-e8f4-4907-93b6-cdfe8c5e3818}</Project>
+      <Name>InterfaceDLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

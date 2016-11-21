@@ -12,8 +12,6 @@ namespace MVC_PictureGallery_Lab.Models
 
         public string url { get; set; }
         public int Size { get; set; }
-        public Guid AccountID { get; set; }
-        public Guid AlbumID { get; set; }
         public virtual List<Guid> CommentsID { get; set; }
     }
 }

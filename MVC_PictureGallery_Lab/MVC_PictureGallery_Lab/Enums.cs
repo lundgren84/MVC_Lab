@@ -5,8 +5,5 @@ using System.Web;
 
 namespace MVC_PictureGallery_Lab
 {
-    public enum GalleryTopics
-    {
-        Hollyday, Work, Family, Fun, Love, Default,
-    }
+   
 }
