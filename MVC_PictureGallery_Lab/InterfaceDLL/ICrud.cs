@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace InterfaceDLL
 {
-    interface ICrud
+   public interface ICrud
     {
         void Delete(object objToDelete);
         void Create(object objtoCreate);
-        object Read(Guid id);
+        object Read(Guid id,string Type);
+        object Read(string Type);
 
 
     }
