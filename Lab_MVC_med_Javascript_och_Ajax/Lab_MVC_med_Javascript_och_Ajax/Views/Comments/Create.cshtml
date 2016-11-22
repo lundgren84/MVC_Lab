@@ -6,7 +6,7 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Create","Comments",FormMethod.Post,new { id = "CommentFormID" }))
 {
     @Html.AntiForgeryToken()
     
@@ -17,8 +17,11 @@
         <div class="form-group">
             @Html.LabelFor(model => model.content, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.content, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.content, new { id="txtbox", @class = "form-control"})
                 @Html.ValidationMessageFor(model => model.content, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-10">
+
             </div>
         </div>
 
@@ -40,5 +43,12 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to Gallery", "Index","Gallery")
 </div>
+<style>
+    .RedBorder{
+        border:red 10px solid;
+    }
+</style>
+<script src="~/JS/CommentsView.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>

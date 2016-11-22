@@ -21,6 +21,10 @@ namespace Lab_MVC_med_Javascript_och_Ajax.Controllers
         {
             return View(db.Pictures.ToList());
         }
+        public ActionResult Change(int? id)
+        {
+            return View();
+        }
 
         // GET: Pictures/Details/5
         public ActionResult Details(int? id)

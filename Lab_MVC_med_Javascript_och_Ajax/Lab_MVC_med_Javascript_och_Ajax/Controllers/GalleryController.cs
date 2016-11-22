@@ -13,8 +13,7 @@ namespace Lab_MVC_med_Javascript_och_Ajax.Controllers
         List<Picture> Pictures = CRUD.GetPictures();
         private GalleryDbContext db = new GalleryDbContext();
         public ActionResult Index()
-        {
-           
+        {           
             return View(Pictures);
         }
         public ActionResult Uppload()
