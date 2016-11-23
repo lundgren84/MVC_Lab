@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConnectionLayer.Tables
 {
-    class tbl_Picture
+    public class tbl_Picture
     {
         public int id { get; set; }
         public string Title { get; set; }

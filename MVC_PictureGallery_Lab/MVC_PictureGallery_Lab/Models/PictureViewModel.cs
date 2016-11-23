@@ -7,11 +7,10 @@ namespace MVC_PictureGallery_Lab.Models
 {
     public class PictureViewModel
     {
-        public Guid id { get; set; }
+        public Guid Id { get; set; }
         public string Title { get; set; }
-
-        public string url { get; set; }
+        public string Url { get; set; }
         public int Size { get; set; }
-        public virtual List<Guid> CommentsID { get; set; }
+        public List<CommentViewModel> Comments { get; set; }
     }
 }

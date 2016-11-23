@@ -10,8 +10,7 @@ namespace MVC_PictureGallery_Lab.Models
     {
         public Guid id { get; set; }
         public string Name { get; set; }
-        public GalleryTopics Topic { get; set; }
-
+        public AlbumTopic Topic { get; set; }
         public List<PictureViewModel> Pictures { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConnectionLayer.Tables
 {
-    class tbl_Comment
+    public class tbl_Comment
     {
         public int id { get; set; }
         public string content { get; set; }
@@ -17,5 +17,6 @@ namespace ConnectionLayer.Tables
         public Guid? UserRefID { get; set; }
         [ForeignKey(name: "UserRefID")]
         public virtual tbl_Account Account { get; set; }
+     
     }
 }

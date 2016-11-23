@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConnectionLayer
+namespace FakeDbLayer
 {
-    public enum GalleryTopics
+    class Picture
     {
-        Hollyday, Work, Family, Fun, Love, Default,
     }
 }

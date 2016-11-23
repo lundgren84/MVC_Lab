@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConnectionLayer.Tables
 {
-    class tbl_Account
+  public class tbl_Account
     {
         public Guid id { get; set; }
         public string email { get; set; }
@@ -16,8 +16,8 @@ namespace ConnectionLayer.Tables
         public string hash { get; set; }
         public string Fistname { get; set; }
         public string Lastname { get; set; }
-        public ICollection<tbl_Album> Albums { get; set; }
-        public ICollection<tbl_Account> Friends { get; set; }
+        public virtual ICollection<tbl_Album> Albums { get; set; }
+        public virtual ICollection<tbl_Account> Friends { get; set; }
         public tbl_Account()
         {
             Albums = new HashSet<tbl_Album>();

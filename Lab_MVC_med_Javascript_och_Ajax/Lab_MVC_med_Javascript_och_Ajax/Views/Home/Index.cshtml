@@ -3,5 +3,11 @@
 }
 
 <h2>StartPage</h2>
-
-
+<div>@Html.ActionLink("Add new Album", "Index", "Gallery")</div>
+@for (var x = 0; x < @Model.Count; x++)
+{
+    <div>
+        @Model[x].Name
+    </div>
+   
+}

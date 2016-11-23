@@ -9,12 +9,13 @@ namespace Lab_MVC_med_Javascript_och_Ajax
 {
     public class GalleryDbContext : DbContext
     {
-        public GalleryDbContext() : base("name =GalleryDbContextConectionString")
+        public GalleryDbContext() : base("name =GalleryDb")
         {
 
         }
         public DbSet<Picture> Pictures { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Comment> Comments { get; set; }     
+        public DbSet<AlbumViewModels> AlbumViewModels { get; set; }
     }
 }

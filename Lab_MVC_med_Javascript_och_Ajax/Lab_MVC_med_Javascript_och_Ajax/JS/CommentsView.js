@@ -8,11 +8,15 @@
         var txtbox = document.getElementById("content");
         
         if (txtbox.value === "") {
-            txtbox.className = "RedBorder form-control";
             e.preventDefault();
+            txtbox.className = "RedBorder form-control";
+            $.growl({ title: "Growl", message: "The kitten is awake!" });
+            $.growl.error({ message: "Enter comment!" });            
         }
         else {
-            txtbox.className = "form-control";                   
+            txtbox.className = "form-control";
+            $.growl.notice({ message: "Comment added!" });
         }
     })
 })();
+

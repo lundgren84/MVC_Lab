@@ -1,4 +1,7 @@
-﻿using InterfaceDLL;
+﻿
+using ConnectionLayer;
+using ConnectionLayer.Tables;
+using InterfaceDLL;
 using MVC_PictureGallery_Lab.Models;
 using System;
 using System.Collections.Generic;
@@ -11,15 +14,18 @@ namespace MVC_PictureGallery_Lab.Controllers
    
     public class HomeController : Controller
     {
-        ICrud db = new FakeDB();
+      //  GalleryCrud db = new FakeDb();
       
 
-
+           
 
         // GET: Home
         public ActionResult Index()
         {
-            List<PictureViewModel> Pictures = (db.Read("Picture"))as List<PictureViewModel>;
+            var db = new Crud();
+            db.AddAccount(new tbl_Account() { Fistname = "a", Lastname = "b" });
+           
+        //    List<PictureViewModel> Pictures = (db.GetPictures())as List<PictureViewModel>;
             return View();
         }
     }
