@@ -1,0 +1,38 @@
+﻿article.image-thumb {
+    position:relative;
+    max-width:100%;
+    min-width: 0;
+    background:none;
+    margin-left: 0%;
+
+}
+
+article.image-thumb img {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+
+
+element.style {
+
+    position: relative;
+    height: ;
+}
+
+.flexcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+
+}
+
+.flexcontainer {
+    width: 100%;
+    margin-top: 150px;
+}

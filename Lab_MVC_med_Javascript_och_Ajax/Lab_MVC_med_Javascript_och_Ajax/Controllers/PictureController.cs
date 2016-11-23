@@ -11,7 +11,7 @@ using System.Web.Mvc;
 namespace Lab_MVC_med_Javascript_och_Ajax.Controllers
 {
     public class PictureController : Controller
-   {
+    {
 
         private GalleryDbContext db = new GalleryDbContext();
 
@@ -92,27 +92,21 @@ namespace Lab_MVC_med_Javascript_och_Ajax.Controllers
         public ActionResult Create(Picture picture, HttpPostedFileBase file)
 
         {
-
-            if (ModelState.IsValid)
+            if (file.ContentLength > 0)
 
             {
-
                 file.SaveAs(Path.Combine(Server.MapPath("~/Saves"), file.FileName));
+            picture.Title = file.FileName;
+            picture.url = $@"/Saves/" + file.FileName;
+            picture.Size = file.ContentLength;
+           
 
-                picture.url = $@"/Saves/" + file.FileName;
-
-                picture.Size = file.ContentLength;
-
+           
                 db.Pictures.Add(picture);
-
                 db.SaveChanges();
 
                 return RedirectToAction("Index", "Gallery");
-
             }
-
-
-
             return View(picture);
 
         }
@@ -279,7 +273,7 @@ namespace Lab_MVC_med_Javascript_och_Ajax.Controllers
 
 
 
-            try 
+            try
 
             {
 
@@ -293,7 +287,7 @@ namespace Lab_MVC_med_Javascript_och_Ajax.Controllers
 
             {
 
-              //  Debug.WriteLine(e.Message);
+                //  Debug.WriteLine(e.Message);
 
             }
 

@@ -6,16 +6,18 @@
 
 @Html.ActionLink("Uppload new picture", "Create", "Picture")
 
-@*<div class="flex-container">
+<div class="flex-container">
     @for (var x = 0; x < Model.Count; x++)
     {
-        <a href="@Url.Action("Show","Gallery",new { id = Model[x].id }, null)">
-            <img style="height:100%;" class="img-responsive flex-item" src="@Url.Content($"{Model[x].url}")" alt=". . .ALT. . .">
-        </a>
+        <article class="image-thumb">
+            <a href="@Url.Action("Show","Gallery",new { id = Model[x].id }, null)">
+                <img src="@Url.Content($"{Model[x].url}")" alt=". . .ALT. . .">
+            </a>
+        </article>
     }
-</div>*@
+</div>
 
-    <div class="row">
+    @*<div class="row">
             @for (var x = 0; x < Model.Count; x++)
             {
                 <div class="col-xs-3">
@@ -34,18 +36,18 @@
                 </div>
             }
 
-        </div>
+        </div>*@
 <style>
     .flex-container {
             display: -webkit-flex;
             display: flex;
-            width: 100%;      
-            background-color: lightgrey;
+            width: 100%;                
             flex-wrap: wrap;
     }
 
     .flex-item {             
-         
+     
             margin: 10px;
+            transition: position 2s;
     }
 </style>
