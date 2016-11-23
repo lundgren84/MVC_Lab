@@ -9,7 +9,7 @@ namespace Lab_MVC_med_Javascript_och_Ajax
 {
     public class GalleryDbContext : DbContext
     {
-        public GalleryDbContext() : base("name =GalleryDb")
+        public GalleryDbContext() : base("name =GalleryDbContextConnectionString")
         {
 
         }

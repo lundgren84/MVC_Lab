@@ -27,7 +27,7 @@
                             <div>@Html.ActionLink("Comment", "Create", "Comments", new { id = Model[x].id }, null)</div>
                             <div>@Html.ActionLink("View picture", "Show", "Gallery", new { id = Model[x].id }, null)</div>
                             <div>@Html.ActionLink("See Comments", "Comment", "Gallery", new { id = Model[x].id }, null)<span>(@Model[x].Comments.Count)</span></div>
-                            <div>@Html.ActionLink("Delete", "Delete", "Pictures", new { id = Model[x].id }, null)</div>
+                            <div>@Html.ActionLink("Delete", "Delete", "Picture", new { id = Model[x].id }, null)</div>
 
                         </div>
                     </div>

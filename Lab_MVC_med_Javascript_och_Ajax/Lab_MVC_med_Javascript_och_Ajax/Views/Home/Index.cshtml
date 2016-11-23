@@ -3,11 +3,12 @@
 }
 
 <h2>StartPage</h2>
-<div>@Html.ActionLink("Add new Album", "Index", "Gallery")</div>
+<div>@Html.ActionLink("Add new Album", "Create", "Album")</div>
+<h3>Albums</h3>
 @for (var x = 0; x < @Model.Count; x++)
 {
     <div>
-        @Model[x].Name
+       <span> Name: @Model[x].Name </span><span>Topic: @Model[x].Topic.ToString();</span> 
     </div>
    
 }
